@@ -28,6 +28,7 @@ home page
 - poner video al principio con el nombre del festival encima
 - carrusel de fotos
 - informacion sobre dudas frecuentes (web oasis sound)
+- artistas --> nachiños fest, con fotos de cada uno y si hoover se da la vuelta y pone el día y la hora
 
 colaboradores: - antes del footer poner los colaboradores con sus logos todos en el mismo color
 

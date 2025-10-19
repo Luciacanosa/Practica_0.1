@@ -1,0 +1,95 @@
+:root {
+  --text-color: aliceblue;
+  --bg-color-primary: rgb(152, 214, 105);
+  --bg-color-menu: rgb(33, 0, 64);
+  --transition-time: 0.3s;
+}
+
+/* lo que me ha dado google para la tipografía */
+
+.bbh-sans-bogle-regular {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(152, 214, 105);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+nav {
+  background-color: rgb(152, 214, 105);
+  display: flex; /* 👉 organiza en línea */
+  justify-content: space-between; /* 👉 logo izq - menú dcha */
+  align-items: center; /* 👉 centra verticalmente */
+  padding: 0 1rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1);
+}
+
+nav > .navbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* ocupa espacio restante */
+  gap: 2rem; /* separación entre elementos */
+}
+
+nav > .navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  font-size: 1.6rem;
+  font-family: "BBH Sans Bogle", sans-serif;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: var(--transition-time);
+  letter-spacing: 1px;
+}
+
+nav > .navbar a:hover {
+  color: var(--bg-color-menu);
+  background-color: var(--text-color);
+}
+
+/* Selector para hover sobre las opciones del menú */
+nav > .navbar a:hover {
+  color: var(--bg-color-menu);
+  background-color: var(--text-color);
+}
