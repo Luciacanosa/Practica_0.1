@@ -19,11 +19,13 @@
   box-sizing: border-box;
 }
 
+/* para que la barrita del menu ocupe todo el ancho */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* colores y tamaño barrita menu */
 header {
   height: 80px;
   position: fixed;
@@ -34,11 +36,13 @@ header {
   z-index: 100;
 }
 
+/* todo le nav para que funcione el menu */
+/* una hora para poner cuatro palabritas */
 nav {
   background-color: rgb(152, 214, 105);
-  display: flex; /* 👉 organiza en línea */
-  justify-content: space-between; /* 👉 logo izq - menú dcha */
-  align-items: center; /* 👉 centra verticalmente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 1rem;
 }
 
@@ -64,8 +68,8 @@ nav > .navbar {
   justify-content: space-evenly;
   padding: 0;
   margin: 0;
-  flex: 1; /* ocupa espacio restante */
-  gap: 2rem; /* separación entre elementos */
+  flex: 1;
+  gap: 2rem;
 }
 
 nav > .navbar a {
@@ -83,13 +87,8 @@ nav > .navbar a {
   letter-spacing: 1px;
 }
 
-nav > .navbar a:hover {
-  color: var(--bg-color-menu);
-  background-color: var(--text-color);
-}
-
 /* Selector para hover sobre las opciones del menú */
 nav > .navbar a:hover {
-  color: var(--bg-color-menu);
-  background-color: var(--text-color);
+  color: rgb(0, 100, 0);
+  transform: scale(1.1);
 }
