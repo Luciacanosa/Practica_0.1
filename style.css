@@ -62,7 +62,7 @@ nav {
   transform: scale(1.1);
 }
 
-nav > .navbar {
+nav > .menu {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -72,7 +72,7 @@ nav > .navbar {
   gap: 2rem;
 }
 
-nav > .navbar a {
+nav > .menu a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +88,7 @@ nav > .navbar a {
 }
 
 /* Selector para hover sobre las opciones del menú */
-nav > .navbar a:hover {
+nav > .menu a:hover {
   color: rgb(0, 100, 0);
   transform: scale(1.1);
 }
