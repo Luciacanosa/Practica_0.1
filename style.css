@@ -229,3 +229,177 @@ nav > .menu a:hover {
   color: #444;
   font-size: 1rem;
 }
+
+/* STYLE INDEX.HTML */
+/* ==== HERO ==== */
+.hero-home {
+  background-image: url("../img/hero-principal.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: rgb(152, 214, 105);
+}
+
+/* ==== BANNER ENTRADAS ==== */
+.entradas-banner {
+  position: relative;
+}
+
+.entradas-banner img {
+  width: 100%;
+  display: block;
+}
+
+.btn-entradas {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgb(152, 214, 105);
+  color: rgb(33, 0, 64);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-entradas:hover {
+  transform: translateX(50%) scale(1.05);
+}
+
+/* ==== SECCIÓN NÚMEROS ==== */
+.numeros {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  text-align: center;
+  background-color: rgb(33, 0, 64);
+  color: white;
+  padding: 60px 0;
+}
+
+.numeros-item h3 {
+  font-size: 3rem;
+  color: rgb(152, 214, 105);
+}
+
+/* ==== INFO FESTIVAL ==== */
+.info-festival {
+  max-width: 1100px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.bloque-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.bloque-info.reverse {
+  flex-direction: row-reverse;
+}
+
+.bloque-info img {
+  width: 45%;
+  border-radius: 12px;
+}
+
+.bloque-info h2 {
+  color: rgb(33, 0, 64);
+  margin-bottom: 15px;
+}
+
+.bloque-info p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==== CARRUSEL PATROCINADORES ==== */
+.patrocinadores {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.patrocinadores-container {
+  display: flex;
+  width: 400%;
+  animation: deslizar 20s infinite linear;
+}
+
+.patrocinadores img {
+  height: 80px;
+  margin: 0 40px;
+  object-fit: contain;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: rgb(33, 0, 64);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer .redes a {
+  margin: 0 10px;
+  color: rgb(152, 214, 105);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .redes a:hover {
+  text-decoration: underline;
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
