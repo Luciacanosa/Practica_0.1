@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entradas</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,21 +11,124 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-       <nav>
-      <h1 class="logo">LOGO</h1>
-      <ul class="menu">
-        <li class="menulink"><a href="#">Artistas</a></li>
-        <li class="menulink"><a href="#">Horario</a></li>
-        <li class="menulink"><a href="#">Información</a></li>
-        <li class="menulink"><a href="#">Entradas</a></li>
-      </ul>
-      <div class="burger">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
+      <nav>
+        <h1 class="logo">LOGO</h1>
+        <ul class="menu">
+          <li class="menulink"><a href="#">Artistas</a></li>
+          <li class="menulink"><a href="#">Horario</a></li>
+          <li class="menulink"><a href="#">Información</a></li>
+          <li class="menulink"><a href="#">Entradas</a></li>
+        </ul>
+        <div class="burger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
     </header>
-</body>
+    <main>
+      <section id="EntradasMenu">
+        <form action="">
+          <div>
+            <label for="AbonoGeneral">Abono General - 70€</label>
+            <input
+              type="number"
+              name="AbonoGenerañ"
+              id="AbonoGeneral"
+              min="0"
+              max="6"
+              value="0"
+              data-price="70"
+            />
+          </div>
+          <div>
+            <label for="EntradaDia1"
+              >Entrada día 1 (18 septiembre 2026) - 40€</label
+            >
+            <input
+              type="number"
+              name="EntradaDia1"
+              id="EntradaDia1"
+              min="0"
+              max="6"
+              value="0"
+              data-price="40"
+            />
+          </div>
+          <div>
+            <label for="EntradaDia2"
+              >Entrada día 2 (19 de septiembre 2026) - 40€</label
+            >
+            <input
+              type="number"
+              name="EntradaDia2"
+              id="EntradaDia2"
+              min="0"
+              max="6"
+              value="0"
+              data-price="40"
+            />
+          </div>
+          <div>
+            <label for="EntradaVIP">Entrada General VIP - 120€</label>
+            <input
+              type="number"
+              name="EntradaVIP"
+              id="ENtradaVIP"
+              min="0"
+              max="3"
+              value="0"
+              data-price="120"
+            />
+          </div>
+          <div>
+            <label for="EntradaVIP1"
+              >Entrada VIP día 1 (18 de septiembre 2026) - 70€</label
+            >
+            <input
+              type="number"
+              name="EntradaVIP1"
+              id="EntradaVIP1"
+              min="0"
+              max="3"
+              value="0"
+              data-price="70"
+            />
+          </div>
+          <div>
+            <label for="EntradaVIP2"
+              >Entrada VIP día 2 (19 de septiembre 2026) - 70€</label
+            >
+            <input
+              type="number"
+              name="EntradaVIP2"
+              id="EntradaVIP2"
+              min="0"
+              max="3"
+              value="0"
+              data-price="70"
+            />
+          </div>
+          <div class="total-price-cont">
+            <p>Precio Total:</p>
+            <p id="totalPrice"></p>
+          </div>
+          <input
+            id="buyFood"
+            type="submit"
+            value="Comprar Entradas"
+            class="disabled"
+          />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Calculadora de Entradas creada por
+        <a href="mailto:4350lucia@gmail.com">Lucía Canosa</a>
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
