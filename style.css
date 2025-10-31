@@ -1,14 +1,26 @@
 :root {
   --text-color: aliceblue;
-  --bg-color-primary: rgb(152, 214, 105);
-  --bg-color-menu: rgb(33, 0, 64);
+  --bg-color-primary: rgb(227, 251, 147);
+  --bg-color-menu: rgb(249, 97, 155);
   --transition-time: 0.3s;
 }
 
-/* lo que me ha dado google para la tipografía */
+/* lo que me ha dado google para las tipografías usadas en la página */
 
-.bbh-sans-bogle-regular {
-  font-family: "BBH Sans Bogle", sans-serif;
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
   font-weight: 400;
   font-style: normal;
 }
@@ -31,29 +43,33 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(152, 214, 105);
+  background-color: rgb(227, 251, 147);
   backdrop-filter: blur(5px);
   z-index: 100;
 }
 
 /* todo le nav para que funcione el menu */
 /* una hora para poner cuatro palabritas */
+/* Ajusta el espacio lateral de la barra */
 nav {
-  background-color: rgb(152, 214, 105);
+  background-color: rgb(227, 251, 147);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
 }
 
+/* Logo pegado a la izquierda */
 .logo-link {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .logo-icon {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -62,94 +78,125 @@ nav {
   transform: scale(1.1);
 }
 
-nav > .menu {
+/* Menú alineado totalmente a la derecha */
+.menu {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.5rem;
   margin: 0;
-  flex: 1;
-  gap: 2rem;
+  padding: 0;
+  flex-grow: 1;
 }
 
-nav > .menu a {
+/* Estilo de enlaces */
+.menu a {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80px;
-  font-size: 1.6rem;
-  font-family: "BBH Sans Bogle", sans-serif;
+  font-size: 1.5rem;
+  font-family: "Boldonse", system-ui;
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
   font-weight: 600;
-  border-radius: 8px;
-  transition: var(--transition-time);
   letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
-/* Selector para hover sobre las opciones del menú */
-nav > .menu a:hover {
-  color: rgb(0, 100, 0);
-  transform: scale(1.1);
+/* Hover */
+.menu a:hover {
+  color: rgb(249, 97, 155);
 }
 
 /* estilos de la página de Artistas */
 
-/* 🔹 Estilos generales de la página de artistas */
-.artistas {
-  margin-top: 100px; /* para que no tape el header fijo */
-  text-align: center;
-  color: var(--bg-color-menu);
-  font-family: "Helvetica Thin", serif;
+/* 1. Reset Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.artistas h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
+/* ... (Estilos de body, header, footer, etc.) ... */
 
-/* 🔸 Galería */
-.galeria-artistas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem 5%;
-}
-
-.artista {
+.contenedor-artistas {
+  /* Contenedor Flexible (Se mantiene igual) */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.tarjeta-artista {
+  /* 2. Ítem Flexible: Define el ancho estricto para TRES COLUMNAS */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  margin: 10px;
+  padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease;
+
+  /* ¡CLAVE ABSOLUTA! ANCHO PARA 3 COLUMNAS: 100% / 3 = 33.333% */
+  /* Le restamos los 20px de margen (10px izq + 10px der) */
+  flex: 0 0 calc(33.333% - 20px);
+
+  overflow: hidden;
 }
 
-.artista img {
+/* 📸 Solución para Imágenes (Se mantiene igual para que no rompan el layout) */
+.tarjeta-artista img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto 10px auto;
+}
+.tarjeta-artista h2 {
+  font-size: 1.3rem;
+  color: rgb(249, 97, 155);
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
-.artista:hover {
-  transform: scale(1.05);
+.tarjeta-artista a {
+  color: #28a745;
+  text-decoration: none;
 }
 
-/* 🔸 Nombre del artista */
-.artista p {
-  margin-top: 0.8rem;
-  font-size: 1.2rem;
-  font-weight: bold;
+/* -------------------------------------- */
+/* 📱 DISEÑO RESPONSIVE (Media Queries Ajustadas)      */
+/* -------------------------------------- */
+
+/* Media Query para asegurar que 3 columnas se mantengan hasta un ancho de tablet grande (por ejemplo, 1024px o menos) */
+@media (max-width: 1024px) {
+  .tarjeta-artista {
+    /* Mantenemos 3 columnas para evitar saltos inesperados */
+    flex: 0 0 calc(33.333% - 20px);
+  }
 }
 
-/* 🔹 Efecto de cambio de imagen con hover */
-.imagen-artista img {
-  transition: opacity 0.4s ease;
+/* Para pantallas medianas (tablets y móviles grandes: 768px de ancho o menos) */
+@media (max-width: 768px) {
+  .tarjeta-artista {
+    /* Reducimos a 2 columnas */
+    flex: 0 0 calc(50% - 20px);
+  }
 }
 
-.imagen-artista img:hover {
-  opacity: 0.8;
+/* Para pantallas muy pequeñas (móviles en vertical: 480px o menos) */
+@media (max-width: 480px) {
+  .tarjeta-artista {
+    /* Reducimos a 1 columna */
+    flex: 0 0 calc(100% - 20px);
+  }
 }
 
 /* ESTILOS PÁGINA INFORMACIÓN */
@@ -168,7 +215,7 @@ nav > .menu a:hover {
 
 .hero-informacion h1 {
   font-size: 3rem;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Boldonse", system-ui;
 }
 
 .info-contenido {
@@ -211,7 +258,7 @@ nav > .menu a:hover {
   margin-top: 10px;
   padding: 8px 16px;
   background-color: rgb(152, 214, 105);
-  color: rgb(33, 0, 64);
+  color: rgb(249, 97, 155);
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -262,7 +309,7 @@ nav > .menu a:hover {
 
 .hero-text h1 {
   font-size: 4rem;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Boldonse", system-ui;
 }
 
 .hero-text h2 {
@@ -286,7 +333,7 @@ nav > .menu a:hover {
   right: 50%;
   transform: translateX(50%);
   background-color: rgb(152, 214, 105);
-  color: rgb(33, 0, 64);
+  color: rgb(249, 97, 155);
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
@@ -304,7 +351,7 @@ nav > .menu a:hover {
   justify-content: center;
   gap: 80px;
   text-align: center;
-  background-color: rgb(33, 0, 64);
+  background-color: rgb(249, 97, 155);
   color: white;
   padding: 60px 0;
 }
@@ -339,7 +386,7 @@ nav > .menu a:hover {
 }
 
 .bloque-info h2 {
-  color: rgb(33, 0, 64);
+  color: rgb(249, 97, 155);
   margin-bottom: 15px;
 }
 
@@ -367,40 +414,56 @@ nav > .menu a:hover {
   object-fit: contain;
 }
 
-/* ==== FOOTER ==== */
-footer {
-  background-color: rgb(33, 0, 64);
-  color: white;
+/* ==== PATROCINADORES ==== */
+.patrocinadores {
   text-align: center;
-  padding: 30px 0;
+  padding: 10px 5px;
+  background-color: #f9f9f9;
 }
 
-footer .redes a {
-  margin: 0 10px;
-  color: rgb(152, 214, 105);
-  text-decoration: none;
-  font-weight: bold;
+.patrocinadores h2 {
+  font-size: 1.5rem;
+  color: rgb(249, 97, 155);
+  margin-bottom: 40px;
 }
 
-footer .redes a:hover {
-  text-decoration: underline;
+/* Contenedor de las imágenes */
+.patrocinadores-container {
+  display: grid;
+  grid-template-columns: repeat(4, 0fr); /* 4 imágenes por fila */
+  gap: 1px; /* espacio entre imágenes */
+  justify-items: center;
+  align-items: center;
 }
 
-@keyframes deslizar {
-  0% {
-    transform: translateX(0);
+/* Cada slide */
+.patrocinadores .slide img {
+  width: 100px; /* tamaño de cada logo */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.patrocinadores .slide img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsivo: en pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .patrocinadores-container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  25% {
-    transform: translateX(-100%);
+}
+
+@media (max-width: 768px) {
+  .patrocinadores-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  50% {
-    transform: translateX(-200%);
-  }
-  75% {
-    transform: translateX(-300%);
-  }
-  100% {
-    transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+  .patrocinadores-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -408,10 +471,10 @@ footer .redes a:hover {
 
 /* Variables */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
-  --font-family: "Arial, sans-serif";
+  --primary-color: rgb(249, 97, 155);
+  --secondary-color: rgb(227, 251, 147);
+  --accent-color: #fff;
+  font-family: "Boldonse", system-ui;
   --input-padding: 10px;
   --input-margin: 0.5rem 0 0 0;
 }
@@ -447,7 +510,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Styling the form inside #foodMenu */
+/* Styling the form inside #EntradasMenu */
 #EntradasMenu form {
   max-width: 728px;
   min-height: fit-content;

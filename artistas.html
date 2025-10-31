@@ -8,16 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Boldonse&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <!-- 🔹 Barra de navegación igual que el index -->
     <header>
       <nav>
-        <h1 class="logo">LOGO</h1>
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/images/icono buho.png"
+            alt="Logo del festival"
+            class="logo-icon"
+          />
+        </a>
         <ul class="menu">
           <li class="menulink"><a href="artistas.html">Artistas</a></li>
           <li class="menulink"><a href="horarios.html">Horario</a></li>
@@ -31,7 +36,7 @@
     </header>
 
     <!-- Galería de artistas -->
-    <main class="artistas">
+    <!-- <main class="artistas">
       <h2>Nuestros Artistas</h2>
       <section class="galeria-artistas">
         <div class="artista">
@@ -320,8 +325,42 @@
           <p>Viva Suecia</p>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <script src="js/script.js"></script>
+    <main class="contenedor-artistas">
+      <article class="tarjeta-artista">
+        <img src="assets/artistas/avenida.jpg" alt="Foto de Artista 1" />
+        <h2>Avenida</h2>
+        <p>
+          Instagram:
+          <a href="https://instagram.com/artista1" target="_blank"
+            >@artista1_music</a
+          >
+        </p>
+      </article>
+
+      <article class="tarjeta-artista">
+        <img src="assets/artistas/besmaya.jpg" alt="Foto de Artista 2" />
+        <h2>Besmaya</h2>
+        <p>
+          Instagram:
+          <a href="https://instagram.com/artista2" target="_blank"
+            >@artista2_oficial</a
+          >
+        </p>
+      </article>
+
+      <article class="tarjeta-artista">
+        <img src="assets/artistas/ciao marina.jpg" alt="Foto de Artista 26" />
+        <h2>Ciao Marina</h2>
+        <p>
+          Instagram:
+          <a href="https://instagram.com/artista26" target="_blank"
+            >@artista26_band</a
+          >
+        </p>
+      </article>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>
