@@ -131,6 +131,15 @@ nav {
   max-width: 1200px;
   margin: 20px auto;
 }
+.contenedor-artistas > header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(227, 251, 147);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
 
 .tarjeta-artista {
   /* 2. Ítem Flexible: Define el ancho estricto para TRES COLUMNAS */
@@ -171,30 +180,28 @@ nav {
   text-decoration: none;
 }
 
-/* -------------------------------------- */
-/* 📱 DISEÑO RESPONSIVE (Media Queries Ajustadas)      */
-/* -------------------------------------- */
+/* DISEÑO RESPONSIVE (Media Queries Ajustadas)  para la pag de artistas     */
 
-/* Media Query para asegurar que 3 columnas se mantengan hasta un ancho de tablet grande (por ejemplo, 1024px o menos) */
+/* Media Query para asegurar que 3 columnas se mantengan hasta un ancho de tablet grande */
 @media (max-width: 1024px) {
   .tarjeta-artista {
-    /* Mantenemos 3 columnas para evitar saltos inesperados */
+    /* 3 columnas */
     flex: 0 0 calc(33.333% - 20px);
   }
 }
 
-/* Para pantallas medianas (tablets y móviles grandes: 768px de ancho o menos) */
+/* Para pantallas medianas  */
 @media (max-width: 768px) {
   .tarjeta-artista {
-    /* Reducimos a 2 columnas */
+    /* 2 columnas */
     flex: 0 0 calc(50% - 20px);
   }
 }
 
-/* Para pantallas muy pequeñas (móviles en vertical: 480px o menos) */
+/* Para pantallas muy pequeñas  */
 @media (max-width: 480px) {
   .tarjeta-artista {
-    /* Reducimos a 1 columna */
+    /* 1 columna */
     flex: 0 0 calc(100% - 20px);
   }
 }
@@ -486,14 +493,14 @@ nav {
   box-sizing: border-box;
 }
 
-header,
-main,
-footer {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(227, 251, 147);
+  backdrop-filter: blur(5px);
+  z-index: 100;
 }
 
 h1 {
@@ -508,6 +515,7 @@ p {
   font-size: 1.6rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 /* Styling the form inside #EntradasMenu */
@@ -518,7 +526,7 @@ p {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
-  border: #3498db 1px solid;
+  border: rgb(249, 97, 155) 1px solid;
 }
 
 #EntradasMenu form div {
@@ -592,4 +600,67 @@ p {
   background-color: white;
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
+}
+
+/* VENTANA MODAL */
+
+main button.btn-modal {
+  background-color: var(--text-dark);
+  color: var(--accent-color);
+  border: var(--accent-color) 2px solid;
+}
+
+main button.btn-modal:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+#modalWindow {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+
+  /* Esto permite animar la propiedad display de none a block */
+  transition: all 0.3s ease-in-out;
+}
+
+#modalWindow.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+#modalWindow .modal-content {
+  color: var(--text-light);
+  background-color: var(--background-light);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--accent-color);
+  max-width: 564px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+#modalWindow .modal-content h2 {
+  font-size: 2rem;
+}
+
+#modalWindow .modal-content .close {
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
 }
