@@ -154,18 +154,17 @@ nav {
 
   /* ¡CLAVE ABSOLUTA! ANCHO PARA 3 COLUMNAS: 100% / 3 = 33.333% */
   /* Le restamos los 20px de margen (10px izq + 10px der) */
-  flex: 0 0 calc(33.333% - 20px);
+  flex: 0 0 calc(25% - 20px);
 
   overflow: hidden;
 }
 
-/* 📸 Solución para Imágenes (Se mantiene igual para que no rompan el layout) */
 .tarjeta-artista img {
   width: 100%;
-  height: 180px;
+  height: 250px;
   object-fit: cover;
   display: block;
-  border-radius: 5px;
+  border-radius: 20px;
   margin: 0 auto 10px auto;
 }
 .tarjeta-artista h2 {
@@ -176,7 +175,13 @@ nav {
 }
 
 .tarjeta-artista a {
-  color: #28a745;
+  font-size: 0.9rem;
+  color: rgb(227, 251, 147);
+  text-decoration: none;
+}
+.tarjeta-artista p {
+  font-size: 1.2rem;
+  color: rgb(227, 251, 147);
   text-decoration: none;
 }
 
@@ -402,26 +407,7 @@ nav {
   line-height: 1.6;
 }
 
-/* ==== CARRUSEL PATROCINADORES ==== */
-.patrocinadores {
-  background-color: #f8f8f8;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.patrocinadores-container {
-  display: flex;
-  width: 400%;
-  animation: deslizar 20s infinite linear;
-}
-
-.patrocinadores img {
-  height: 80px;
-  margin: 0 40px;
-  object-fit: contain;
-}
-
-/* ==== PATROCINADORES ==== */
+/*  PATROCINADORES  */
 .patrocinadores {
   text-align: center;
   padding: 10px 5px;
@@ -438,8 +424,7 @@ nav {
 .patrocinadores-container {
   display: grid;
   grid-template-columns: repeat(4, 0fr); /* 4 imágenes por fila */
-  gap: 1px; /* espacio entre imágenes */
-  justify-items: center;
+  gap: 30px; /* espacio entre imágenes */
   align-items: center;
 }
 
@@ -449,13 +434,15 @@ nav {
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease, filter 0.3s ease;
+  justify-items: center;
+  align-items: center;
 }
 
 .patrocinadores .slide img:hover {
   transform: scale(1.1);
 }
 
-/* Responsivo: en pantallas más pequeñas */
+/* Responsive co media queries */
 @media (max-width: 1024px) {
   .patrocinadores-container {
     grid-template-columns: repeat(3, 1fr);
