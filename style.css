@@ -730,3 +730,116 @@ main button.btn-modal:hover {
   }
 }
 
+
+/* inicio página principal */
+/* Fondo con imagen */
+.fondo-festival {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/images/intro\ home\ page\ festival.jpg'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+/* Contenido principal */
+.pagina-principal {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px; /* espacio para el header */
+  color: white;
+  font-family: "Boldonse", system-ui"
+}
+
+/* Contenedor de contenido */
+.contenido-festival {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título arriba a la izquierda */
+.titulo-festival {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Ciudad abajo a la izquierda */
+.ciudad-festival {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 4rem;
+  color: rgb(227, 251, 147);
+}
+
+/* Bloque central con artistas y fechas */
+.bloque-central {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+/* Lista de artistas */
+.lista-artistas {
+  list-style: none;
+  padding: 0;
+  font-size: 1.8rem;
+  line-height: 2;
+  text-align: left;
+}
+
+.fechas-festival {
+  position: absolute;
+  bottom: 40px; /* ← mismo valor que .ciudad-festival */
+  right: 40px;  /* ← pegado al borde derecho */
+  text-align: right;
+  font-size: 4rem;
+  line-height: 2;
+  color: rgb(249, 97, 155);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bloque-central {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .titulo-festival,
+  .ciudad-festival {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+ 
+}
+
+
+
+/* css para la cuenta atrás del festival en la página principal */
+.demo p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+

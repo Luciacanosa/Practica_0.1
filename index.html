@@ -38,12 +38,61 @@
         </div>
       </nav>
     </header>
-    <section class="hero-home">
-      <div class="hero-text">
-        <h1>El Jardín de las Delicias</h1>
-        <h2>Edición 2026 - Madrid</h2>
-      </div>
-    </section>
+    <main class="pagina-principal">
+  <div class="fondo-festival"></div>
+
+  <section class="contenido-festival">
+    <h1 class="titulo-festival">
+      Festival<br />
+      Jardin de las<br />
+      Delicias<br />
+      2026
+    </h1>
+
+    <h2 class="ciudad-festival">Madrid</h2>
+
+    <div class="bloque-central">
+      <ul class="lista-artistas">
+        <li>Avenida</li>
+        <li>Besmaya</li>
+        <li>Ciao Marina</li>
+        <li>GuitarricadelaFuente</li>
+        <li>Hey Kid</li>
+        <li>Inazio</li>
+        <li>Iñigo Quintero</li>
+        <li>Javi Chapela</li>
+        <li>La Azotea</li>
+        <li>La M.O.D.A</li>
+        <li>Lucas Colman</li>
+        <li>Luis Fercán</li>
+        <li>Leiva</li>
+      </ul >
+      <ul class="lista-artistas">
+        <li>Mafalda Cardenal</li>
+        <li>Malmö 040</li>
+        <li>Maren</li>
+        <li>Marlon</li>
+        <li>MBongo</li>
+        <li>Niña Polaca</li>
+        <li>Pablopablo</li>
+        <li>Puño Dragón</li>
+        <li>Samuraï</li>
+        <li>Siloé</li>
+        <li>Sobrezero</li>
+        <li>Taburete</li>
+        <li>Viva Suecia</li>
+
+      </ul>
+    </div>
+      
+    <div class="fechas-festival">18-19<br />
+      Septiembre<br />
+      2026</div>
+    <div class="fechas-festival"></div>
+  </section>
+</main>
+
+  
 
     <!-- ENTRADAS BANNER -->
     <section class="entradas-banner">
@@ -52,10 +101,50 @@
         alt="Entradas ya a la venta"
       />
     </section>
-    <section>
-      <a href="entradas.html" class="btn-entradas">Comprar Entradas</a>
-    </section>
+    
+    <!-- CUENTA ATRÄS FESTIVAL -->
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
 
+
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sept 18, 2026 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
     <!-- SECCIÓN NÚMEROS -->
     <section class="numeros">
       <div class="numeros-item">
@@ -71,6 +160,7 @@
         <p>ARTISTAS</p>
       </div>
     </section>
+    
 
     <!-- INFORMACIÓN DEL FESTIVAL -->
     <section class="info-festival">
