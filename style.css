@@ -834,12 +834,33 @@ main button.btn-modal:hover {
 }
 
 
-
-/* css para la cuenta atrás del festival en la página principal */
-.demo p {
+/* css para la cuenta atrás del festival */
+#demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 60px;
+  font-size: 4rem;
   margin-top: 0px;
+  color: rgb(227, 251, 147); /* opcional para que combine con tu diseño */
 }
 
+/* responsive para la cuenta atras */
+@media (max-width: 1024px) {
+  #demo {
+    font-size: 3rem;
+  }
+}
 
+@media (max-width: 768px) {
+  #demo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #demo {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+}
