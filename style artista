@@ -1,0 +1,89 @@
+.contenedor-artistas {
+  /* Contenedor Flexible (Se mantiene igual) */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.contenedor-artistas > header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(227, 251, 147);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.tarjeta-artista {
+  /* 2. Ítem Flexible: Define el ancho estricto para TRES COLUMNAS */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+
+  /* ¡CLAVE ABSOLUTA! ANCHO PARA 3 COLUMNAS: 100% / 3 = 33.333% */
+  /* Le restamos los 20px de margen (10px izq + 10px der) */
+  flex: 0 0 calc(25% - 20px);
+
+  overflow: hidden;
+}
+
+.tarjeta-artista img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  margin: 0 auto 10px auto;
+}
+.tarjeta-artista h2 {
+  font-size: 1.3rem;
+  color: rgb(249, 97, 155);
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.tarjeta-artista a {
+  font-size: 0.9rem;
+  color: rgb(227, 251, 147);
+  text-decoration: none;
+}
+.tarjeta-artista p {
+  font-size: 1.2rem;
+  color: rgb(227, 251, 147);
+  text-decoration: none;
+}
+
+/* DISEÑO RESPONSIVE (Media Queries Ajustadas)  para la pag de artistas     */
+
+/* Media Query para asegurar que 3 columnas se mantengan hasta un ancho de tablet grande */
+@media (max-width: 1024px) {
+  .tarjeta-artista {
+    /* 3 columnas */
+    flex: 0 0 calc(33.333% - 20px);
+  }
+}
+
+/* Para pantallas medianas  */
+@media (max-width: 768px) {
+  .tarjeta-artista {
+    /* 2 columnas */
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+/* Para pantallas muy pequeñas  */
+@media (max-width: 480px) {
+  .tarjeta-artista {
+    /* 1 columna */
+    flex: 0 0 calc(100% - 20px);
+  }
+}
