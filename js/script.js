@@ -105,35 +105,27 @@ window.addEventListener("click", function (event) {
 
 
 // modal info 2
-// Función propia para abrir ventana modal
-function openModalWindow() {
-  let modalWindow = document.querySelector("#modalWindow2");
-  modalWindow.classList.add("show-modal");
-}
+let btnOpenModal2 = document.querySelector("#openModal2");
+btnOpenModal2.addEventListener("click", function () {
+  let modalWindow2 = document.querySelector("#modalWindow2");
+  modalWindow2.classList.add("show-modal");
+});
 
-let btnCloseModal2 = document.querySelector(
-  "#modalWindow2 > .modal-content > .close"
-);
-let btnCloseModalAccept2 = document.querySelector(
-  "#modalWindow2 > .modal-content > #closeModalAccept"
-);
+let btnCloseModal2 = document.querySelector("#modalWindow2 > .modal-content > .close");
+let btnCloseModalAccept2 = document.querySelector("#modalWindow2 > .modal-content > #closeModalAccept2");
 
-btnCloseModal2.addEventListener("click", closeModalWindow);
-btnCloseModalAccept2.addEventListener("click", closeModalWindow);
+btnCloseModal2.addEventListener("click", function () {
+  document.querySelector("#modalWindow2").classList.remove("show-modal");
+});
 
-// Función para cerrar la ventana modal
-function closeModalWindow() {
-  let modalWindow = document.querySelector("#modalWindow");
-  modalWindow.classList.remove("show-modal");
-}
+btnCloseModalAccept2.addEventListener("click", function () {
+  document.querySelector("#modalWindow2").classList.remove("show-modal");
+});
 
-// Cerrar ventana modal cuando se detecta click fuera
 window.addEventListener("click", function (event) {
-  // llama solo a la función de cerrar modal siempre que el click no sea en la propia ventana modal
-  let modal = document.querySelector("#modalWindow");
-
-  if (event.target == modal) {
-    closeModalWindow();
+  let modal2 = document.querySelector("#modalWindow2");
+  if (event.target == modal2) {
+    modal2.classList.remove("show-modal");
   }
 });
 
