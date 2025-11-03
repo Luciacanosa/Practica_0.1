@@ -165,6 +165,166 @@ nav {
   color: #333;
 }
 
+/* estilos para el main de la página de información */
+.info-main {
+  min-height: 100vh;
+  background-image: url('assets/images/intro\ home\ page\ festival.jpg'); /* usa tu imagen de fondo aquí */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.main-box {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-box h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.main-box h1 span {
+  font-weight: bold;
+  display: block;
+}
+
+.main-box .informacionh1p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: black;
+}
+
+/* estilos de css para las ventanas modale de Leer mÁs de la página información */
+/* VENTANA MODAL */
+
+main button.btn-modal {
+  background-color: var(--text-dark);
+  color: rgb(227, 251, 147);
+  border: rgb(249, 97, 155) 2px solid;
+}
+
+main button.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: rgb(249, 97, 155);
+}
+
+#modalWindow {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+
+  /* Esto permite animar la propiedad display de none a block */
+  transition: all 0.3s ease-in-out;
+}
+
+#modalWindow.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+#modalWindow .modal-content {
+  color: rgb(227, 251, 147);
+  background-color: rgb(249, 97, 155);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgb(227, 251, 147);
+  max-width: 564px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+#modalWindow .modal-content h2 {
+  font-size: 2rem;
+}
+
+#modalWindow .modal-content .close {
+  color: rgb(227, 251, 147);
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#modalWindow2.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+#modalWindow .modal-content {
+  color: rgb(227, 251, 147);
+  background-color: rgb(249, 97, 155);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgb(227, 251, 147);
+  max-width: 564px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+#modalWindow2 .modal-content h2 {
+  font-size: 2rem;
+}
+
+#modalWindow2 .modal-content .close {
+  color: rgb(227, 251, 147);
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-modal {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid rgb(227, 251, 147);
+  border-radius: 50px;
+  background-color: white;
+  color: rgb(227, 251, 147);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: white;
+  border-color: rgb(249, 97, 155);
+}
+
+
 
 
 /* 1º idea stilo hero principal de las páginas */
@@ -449,68 +609,6 @@ p {
   border: 1px solid var(--secondary-color);
 }
 
-/* VENTANA MODAL */
-
-main button.btn-modal {
-  background-color: var(--text-dark);
-  color: rgb(227, 251, 147);
-  border: rgb(249, 97, 155) 2px solid;
-}
-
-main button.btn-modal:hover {
-  background-color: rgb(249, 97, 155);
-  color: rgb(249, 97, 155);
-}
-
-#modalWindow {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.75);
-  opacity: 0;
-
-  /* Esto permite animar la propiedad display de none a block */
-  transition: all 0.3s ease-in-out;
-}
-
-#modalWindow.show-modal {
-  display: block;
-  opacity: 1;
-}
-
-#modalWindow .modal-content {
-  color: rgb(227, 251, 147);
-  background-color: rgb(249, 97, 155);
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid rgb(227, 251, 147);
-  max-width: 564px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 1.4rem;
-}
-
-#modalWindow .modal-content h2 {
-  font-size: 2rem;
-}
-
-#modalWindow .modal-content .close {
-  color: rgb(227, 251, 147);
-  font-size: 2rem;
-  font-weight: bold;
-  align-self: flex-end;
-  cursor: pointer;
-  margin-right: 10px;
-}
 
 /* para los apartados que están como Entradas Agotadas, cambiarles el color */
 #EntradasMenu form .agotado {
