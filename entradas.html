@@ -46,18 +46,20 @@
       </section>
       <section id="EntradasMenu">
         <form action="">
-          <div>
+          <div class="agotado">
             <label for="AbonoGeneralAgotado">Abono General - 1ºPase (AGOTADO) - 60€</label>
             <input
               type="number"
-              name="AbonoGenerañ"
+              name="AbonoGeneralAgotado"
               id="AbonoGeneralAgotado"
               min="0"
               max="0"
               value="0"
               data-price="60"
+              disabled
             />
           </div>
+
           <div>
             <label for="AbonoGeneral">Abono General - 2ºPase - 70€</label>
             <input
@@ -98,16 +100,17 @@
               data-price="40"
             />
           </div>
-          <div>
-            <label for="EntradaVIPAgotado">Entrada General VIP - 1ºPase (AGOTADO) - 120€</label>
+          <div class="agotado">
+            <label for="AbonoGeneralAgotado">Abono General VIP - 1ºPase (AGOTADO) - 100€</label>
             <input
               type="number"
-              name="EntradaVIPAgotado"
-              id="ENtradaVIPAgotado"
+              name="AbonoGeneralVIPAgotado"
+              id="AbonoGeneralVIPAgotado"
               min="0"
-              max="3"
+              max="0"
               value="0"
-              data-price="120"
+              data-price="100"
+              disabled
             />
           </div>
           <div>

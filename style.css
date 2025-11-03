@@ -5,6 +5,13 @@
   --transition-time: 0.3s;
 }
 
+/* para que cada elemento (section) de la página tenga un respiro y no este todo tan pegado */
+section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+
 /* lo que me ha dado google para las tipografías usadas en la página */
 
 .boldonse-regular {
@@ -158,32 +165,11 @@ nav {
   color: #333;
 }
 
-/* .ver-mas {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: rgb(152, 214, 105);
-  color: rgb(249, 97, 155);
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
-.ver-mas:hover {
-  transform: scale(1.05);
-}
 
-.texto-oculto {
-  display: none;
-  margin-top: 10px;
-  color: #444;
-  font-size: 1rem;
-} */
-
-/* STYLE INDEX.HTML */
-/* ==== HERO ==== */
-.hero-home {
+/* 1º idea stilo hero principal de las páginas */
+/*  HERO  */
+/* .hero-home {
   background-image: url("../img/hero-principal.jpg");
   background-size: cover;
   background-position: center;
@@ -219,23 +205,14 @@ nav {
 .hero-text h2 {
   font-size: 2rem;
   color: rgb(152, 214, 105);
-}
-
-/* ==== BANNER ENTRADAS ==== */
-.entradas-banner {
-  position: relative;
-}
-
-.entradas-banner img {
-  width: 100%;
-  display: block;
-}
+} */
 
 
 
 
 
-/* ==== SECCIÓN NÚMEROS ==== */
+
+/* SECCIÓN NÚMEROS página principal (2 dias, 2 escenarios, 26 artistas  */
 .numeros {
   display: flex;
   justify-content: center;
@@ -251,7 +228,7 @@ nav {
   color: rgb(152, 214, 105);
 }
 
-/* ==== INFO FESTIVAL ==== */
+/*  INFO FESTIVAL página principal, bloques foto + texto*/
 .info-festival {
   max-width: 1100px;
   margin: 100px auto;
@@ -285,7 +262,8 @@ nav {
   line-height: 1.6;
 }
 
-/*  PATROCINADORES  */
+/*  PATROCINADORES página principal */
+/* ARREGLAR QUE NO SE QUEDA CENTRADO EN LA PÁGINA */
 .patrocinadores {
   text-align: center;
   padding: 10px 5px;
@@ -385,7 +363,7 @@ p {
 
 
 #EntradasMenu form {
-  max-width: 900px;
+  max-width: 1000px;
   min-height: fit-content;
   padding: 2rem; 
   margin: 0 auto; 
@@ -533,6 +511,25 @@ main button.btn-modal:hover {
   cursor: pointer;
   margin-right: 10px;
 }
+
+/* para los apartados que están como Entradas Agotadas, cambiarles el color */
+#EntradasMenu form .agotado {
+  border-radius: 4px;
+  padding: 1rem;
+  opacity: 0.7;
+}
+
+#EntradasMenu form .agotado label {
+  color: #999;
+}
+
+#EntradasMenu form .agotado input[type="number"] {
+  background-color: #ddd;
+  color: #666;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}
+
 
 
 
@@ -850,4 +847,34 @@ main button.btn-modal:hover {
     font-size: 2rem;
     padding: 0 20px;
   }
+}
+
+
+/* botón en el index.html que te lleva a entradas.html para poder comprarlas más rapido */
+.boton-entradas {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 2px solid rgb(227, 251, 147);
+  border-radius: 50px;
+  background-color: white;
+  color: rgb(227, 251, 147);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* para que el botón aparezca centrado en la página lo hacemos flex box y más fácil */
+.boton-container-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+
+.boton-entradas:hover {
+  background-color: rgb(249, 97, 155); 
+  color: white;
+  border-color: rgb(249, 97, 155);
 }
