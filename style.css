@@ -166,6 +166,12 @@ nav {
 }
 
 /* estilos para el main de la página de información */
+
+body.informacion section {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
 .info-main {
   min-height: 100vh;
   background-image: url('assets/images/intro\ home\ page\ festival.jpg'); /* usa tu imagen de fondo aquí */
@@ -204,6 +210,28 @@ nav {
   margin: 0.5rem 0;
   color: black;
 }
+
+/* estilos para las imagenes */
+
+.info-bloque img {
+  width: 500px; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-left: 2rem; 
+  margin-right: 2rem; 
+  object-fit: cover;
+  
+  
+}
+.info-bloque.derecha img {
+  margin-left: 2rem;
+  margin-right: 0;
+}
+.info-bloque {
+  align-items: center;
+}
+
 
 /* estilos de css para las ventanas modale de Leer mÁs de la página información */
 /* VENTANA MODAL */
@@ -246,8 +274,8 @@ main button.btn-modal:hover {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid rgb(227, 251, 147);
-  max-width: 564px;
-  border-radius: 10px;
+  max-width: 900px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -260,6 +288,10 @@ main button.btn-modal:hover {
   font-size: 2rem;
 }
 
+#modalWindow .modal-content p {
+  font-size: 1rem;
+}
+
 #modalWindow .modal-content .close {
   color: rgb(227, 251, 147);
   font-size: 2rem;
@@ -269,18 +301,116 @@ main button.btn-modal:hover {
   margin-right: 10px;
 }
 
+
+
+.btn-modal {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid rgb(227, 251, 147);
+  border-radius: 50px;
+  background-color: white;
+  color: rgb(227, 251, 147);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: white;
+  border-color: rgb(249, 97, 155);
+}
+
+#modalWindow .modal-content #closeModalAccept {
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(249, 97, 155);
+  border: 2px solid rgb(249, 97, 155);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modalWindow .modal-content #closeModalAccept:hover {
+  background-color: rgb(227, 251, 147);
+  color: white;
+}
+
+/* MEDIA QUERIES PARA MODALES EN PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  #modalWindow .modal-content {
+    max-width: 95%;
+    margin: 20% auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #modalWindow .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  #modalWindow .modal-content p {
+    font-size: 1rem;
+  }
+
+  #modalWindow .modal-content .close {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  #modalWindow .modal-content #closeModalAccept {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+
+
+/* modal 2 */
+main button.btn-modal {
+  background-color: var(--text-dark);
+  color: rgb(227, 251, 147);
+  border: rgb(249, 97, 155) 2px solid;
+}
+
+main button.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: rgb(249, 97, 155);
+}
+
+#modalWindow2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+
+  /* Esto permite animar la propiedad display de none a block */
+  transition: all 0.3s ease-in-out;
+}
+
 #modalWindow2.show-modal {
   display: block;
   opacity: 1;
 }
 
-#modalWindow .modal-content {
+#modalWindow2 .modal-content {
   color: rgb(227, 251, 147);
   background-color: rgb(249, 97, 155);
   margin: 15% auto;
   padding: 20px;
   border: 1px solid rgb(227, 251, 147);
-  max-width: 564px;
+  max-width: 900px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -292,6 +422,10 @@ main button.btn-modal:hover {
 
 #modalWindow2 .modal-content h2 {
   font-size: 2rem;
+}
+
+#modalWindow2 .modal-content p {
+  font-size: 1rem;
 }
 
 #modalWindow2 .modal-content .close {
@@ -324,6 +458,315 @@ main button.btn-modal:hover {
   border-color: rgb(249, 97, 155);
 }
 
+#modalWindow2 .modal-content #closeModalAccept2 {
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(249, 97, 155);
+  border: 2px solid rgb(249, 97, 155);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modalWindow2 .modal-content #closeModalAccept2:hover {
+  background-color: rgb(227, 251, 147);
+  color: white;
+}
+
+/* MEDIA QUERIES PARA MODALES2 EN PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  #modalWindow2 .modal-content {
+    max-width: 95%;
+    margin: 20% auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #modalWindow2 .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  #modalWindow2 .modal-content p {
+    font-size: 1rem;
+  }
+
+  #modalWindow2 .modal-content .close {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  #modalWindow2 .modal-content #closeModalAccept {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+
+/* modal 3 */
+main button.btn-modal {
+  background-color: var(--text-dark);
+  color: rgb(227, 251, 147);
+  border: rgb(249, 97, 155) 2px solid;
+}
+
+main button.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: rgb(249, 97, 155);
+}
+
+#modalWindow3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+
+  /* Esto permite animar la propiedad display de none a block */
+  transition: all 0.3s ease-in-out;
+}
+
+#modalWindow3.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+#modalWindow3 .modal-content {
+  color: rgb(227, 251, 147);
+  background-color: rgb(249, 97, 155);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgb(227, 251, 147);
+  max-width: 900px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+#modalWindow3 .modal-content h2 {
+  font-size: 2rem;
+}
+
+#modalWindow3 .modal-content p {
+  font-size: 1rem;
+}
+
+#modalWindow3 .modal-content .close {
+  color: rgb(227, 251, 147);
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-modal {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid rgb(227, 251, 147);
+  border-radius: 50px;
+  background-color: white;
+  color: rgb(227, 251, 147);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: white;
+  border-color: rgb(249, 97, 155);
+}
+
+#modalWindow3 .modal-content #closeModalAccept3 {
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(249, 97, 155);
+  border: 2px solid rgb(249, 97, 155);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modalWindow3 .modal-content #closeModalAccept3:hover {
+  background-color: rgb(227, 251, 147);
+  color: white;
+}
+
+/* MEDIA QUERIES PARA MODALES2 EN PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  #modalWindow3 .modal-content {
+    max-width: 95%;
+    margin: 20% auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #modalWindow3 .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  #modalWindow3 .modal-content p {
+    font-size: 1rem;
+  }
+
+  #modalWindow3 .modal-content .close {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  #modalWindow3 .modal-content #closeModalAccept {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* modal 4 */
+main button.btn-modal {
+  background-color: var(--text-dark);
+  color: rgb(227, 251, 147);
+  border: rgb(249, 97, 155) 2px solid;
+}
+
+main button.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: rgb(249, 97, 155);
+}
+
+#modalWindow4 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+
+  /* Esto permite animar la propiedad display de none a block */
+  transition: all 0.3s ease-in-out;
+}
+
+#modalWindow4.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+#modalWindow4 .modal-content {
+  color: rgb(227, 251, 147);
+  background-color: rgb(249, 97, 155);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgb(227, 251, 147);
+  max-width: 900px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+#modalWindow4 .modal-content h2 {
+  font-size: 2rem;
+}
+
+#modalWindow4 .modal-content p {
+  font-size: 1rem;
+}
+
+#modalWindow4 .modal-content .close {
+  color: rgb(227, 251, 147);
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-modal {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid rgb(227, 251, 147);
+  border-radius: 50px;
+  background-color: white;
+  color: rgb(227, 251, 147);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-modal:hover {
+  background-color: rgb(249, 97, 155);
+  color: white;
+  border-color: rgb(249, 97, 155);
+}
+
+#modalWindow4 .modal-content #closeModalAccept4 {
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(249, 97, 155);
+  border: 2px solid rgb(249, 97, 155);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modalWindow4 .modal-content #closeModalAccept4:hover {
+  background-color: rgb(227, 251, 147);
+  color: white;
+}
+
+/* MEDIA QUERIES PARA MODALES4 EN PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  #modalWindow4 .modal-content {
+    max-width: 95%;
+    margin: 20% auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #modalWindow4 .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  #modalWindow4 .modal-content p {
+    font-size: 1rem;
+  }
+
+  #modalWindow4 .modal-content .close {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  #modalWindow4 .modal-content #closeModalAccept {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
 
 
 

@@ -129,6 +129,57 @@ window.addEventListener("click", function (event) {
   }
 });
 
+// modal info 3
+let btnOpenModal3 = document.querySelector("#openModal3");
+btnOpenModal3.addEventListener("click", function () {
+  let modalWindow3 = document.querySelector("#modalWindow3");
+  modalWindow3.classList.add("show-modal");
+});
+
+let btnCloseModal3 = document.querySelector("#modalWindow3 > .modal-content > .close");
+let btnCloseModalAccept3 = document.querySelector("#modalWindow3 > .modal-content > #closeModalAccept3");
+
+btnCloseModal3.addEventListener("click", function () {
+  document.querySelector("#modalWindow3").classList.remove("show-modal");
+});
+
+btnCloseModalAccept3.addEventListener("click", function () {
+  document.querySelector("#modalWindow3").classList.remove("show-modal");
+});
+
+window.addEventListener("click", function (event) {
+  let modal3 = document.querySelector("#modalWindow3");
+  if (event.target == modal3) {
+    modal3.classList.remove("show-modal");
+  }
+});
+
+// modal info 4
+let btnOpenModal4 = document.querySelector("#openModal4");
+btnOpenModal4.addEventListener("click", function () {
+  let modalWindow4 = document.querySelector("#modalWindow4");
+  modalWindow4.classList.add("show-modal");
+});
+
+let btnCloseModal4 = document.querySelector("#modalWindow4 > .modal-content > .close");
+let btnCloseModalAccept4 = document.querySelector("#modalWindow4 > .modal-content > #closeModalAccept4");
+
+btnCloseModal4.addEventListener("click", function () {
+  document.querySelector("#modalWindow4").classList.remove("show-modal");
+});
+
+btnCloseModalAccept4.addEventListener("click", function () {
+  document.querySelector("#modalWindow4").classList.remove("show-modal");
+});
+
+window.addEventListener("click", function (event) {
+  let modal4 = document.querySelector("#modalWindow4");
+  if (event.target == modal4) {
+    modal4.classList.remove("show-modal");
+  }
+});
+
+
 
 // script para la cuenta atrás del festival
 // página principal
