@@ -26,6 +26,26 @@ section {
   box-sizing: border-box;
 }
 
+/* font Roboto */
+
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 87.5;
+}
+
+.roboto-extra-light {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 87.5;
+}
+
+
 /* para que la barrita del menu ocupe todo el ancho */
 body {
   margin: 0;
@@ -161,8 +181,13 @@ nav {
 }
 
 .resumen {
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: #333;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 87.5;
 }
 
 /* estilos para el main de la página de información */
@@ -286,10 +311,28 @@ main button.btn-modal:hover {
 
 #modalWindow .modal-content h2 {
   font-size: 2rem;
+  color: #fff;
+  
+}
+
+#modalWindow .modal-content h3 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "wdth" 87.5;
+  
 }
 
 #modalWindow .modal-content p {
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 87.5;
+  
 }
 
 #modalWindow .modal-content .close {
@@ -769,46 +812,6 @@ main button.btn-modal:hover {
 }
 
 
-
-/* 1º idea stilo hero principal de las páginas */
-/*  HERO  */
-/* .hero-home {
-  background-image: url("../img/hero-principal.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.hero-home::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.hero-text {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-text h1 {
-  font-size: 4rem;
-  font-family: "Boldonse", system-ui;
-}
-
-.hero-text h2 {
-  font-size: 2rem;
-  color: rgb(152, 214, 105);
-} */
 
 
 
