@@ -899,6 +899,14 @@ main button.btn-modal:hover {
   }
 }
 
+/* imagen baner entradas disponible en cruz */
+.entradas-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 
 /* css para la página de entradas */
 
@@ -1500,21 +1508,37 @@ p {
 
 
 /* Responsive */
+/* este es más completo ya que como hay más cosas en el main, es más difícil que todo quede bien cuando se hace para pantalla pequeña */
 @media (max-width: 768px) {
-  .bloque-central {
+  .contenido-festival {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    text-align: center;
   }
 
   .titulo-festival,
-  .ciudad-festival {
+  .ciudad-festival,
+  .fechas-festival {
     position: static;
+    font-size: 2.5rem;
+    margin: 1rem 0;
     text-align: center;
-    margin-bottom: 20px;
   }
- 
+
+  .bloque-central {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2rem;
+  }
+
+  .lista-artistas {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: center;
+  }
 }
+
 
 
 /* css para la cuenta atrás del festival */
