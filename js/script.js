@@ -4,12 +4,20 @@
 
 let burger = document.querySelector(".burger > i");
 let menu_opt = document.querySelector(".menu");
+let closeMenuBtn = document.querySelector(".close-menu");
 
 // definimos evneto click sobre le botón del menú
 burger.addEventListener("click", function () {
-  burger.classList.toggle("fa-bars");
-  burger.classList.toggle("fa-times");
-  menu_opt.classList.toggle("menu-show");
+  if(!isOpen) {
+    menu_opt.classList.add("menu-show")
+    burger.classList.remove("fa-bars")
+    burger.classList.add("fa-times")
+  } else {
+    menu_opt.classList.remove("menu-show")
+    burger.classList.remove("fa-times")
+    burger.classList.add("fa-bars")
+  }
+
 });
 
 // menu acordeon página información
@@ -24,6 +32,36 @@ botones.forEach((boton) => {
       texto.style.display === "block" ? "Leer menos" : "Leer más";
   });
 });
+
+// efecto scroll cabecera
+
+/*jslint devel: true*/
+/*eslint-env browser*/
+
+function shrinkHeader() {
+    "use strict";
+    var scroll = window.scrollY;
+    var threshold = window.innerHeight / 2;
+    var header = document.getElementsByTagName("header")[0];
+    if (scroll > threshold) {
+        header.style.height = "3em";
+        header.firstElementChild.style.fontSize = "2em";
+        header.lastElementChild.className = "desaparecer";
+    } else {
+        header.style.height = "7em";
+        header.firstElementChild.style.fontSize = "3em";
+        header.lastElementChild.className = "";
+    }
+}
+
+window.onscroll = function () {
+    "use strict";
+    shrinkHeader();
+};
+
+
+
+
 
 //  JS PARA FORMULARIO COMPRAENTRADAS
 document.addEventListener("DOMContentLoaded", function () {
@@ -204,3 +242,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 1000);
 });
+
+
+
+// pantalla de carga
+var contador = 0;
+
+function carga() {
+    if (contador <= 100) {
+        document.getElementById("porcentaje").innerHTML = contador + "%";
+        contador = contador + 1;
+        setTimeout(carga, 50);
+    } else {
+        document.getElementById("carga").style.top = "-100%";
+    }
+}
+
+window.onload = function () {
+    carga();
+}
