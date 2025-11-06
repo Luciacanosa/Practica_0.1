@@ -1,7 +1,7 @@
 :root {
   --text-color: aliceblue;
-  --bg-color-primary: rgb(227, 251, 147);
-  --bg-color-menu: rgb(249, 97, 155);
+  --bg-color-primary: rgb(4, 107, 98);
+  --bg-color-menu: rgb(248, 125, 172);
   --transition-time: 0.3s;
 }
 
@@ -58,7 +58,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   backdrop-filter: blur(5px);
   z-index: 100;
 }
@@ -67,7 +67,7 @@ header {
 /* una hora para poner cuatro palabritas */
 /* Ajusta el espacio lateral de la barra */
 nav {
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -263,13 +263,13 @@ body.informacion section {
 
 main button.btn-modal {
   background-color: var(--text-dark);
-  color: rgb(227, 251, 147);
-  border: rgb(249, 97, 155) 2px solid;
+  color: rgb(4, 107, 98);
+  border: rgb(248, 125, 172) 2px solid;
 }
 
 main button.btn-modal:hover {
-  background-color: rgb(249, 97, 155);
-  color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
+  color: rgb(248, 125, 172);
 }
 
 #modalWindow {
@@ -294,11 +294,11 @@ main button.btn-modal:hover {
 }
 
 #modalWindow .modal-content {
-  color: rgb(227, 251, 147);
-  background-color: rgb(249, 97, 155);
+  color: rgb(4, 107, 98);
+  background-color: rgb(248, 125, 172);
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid rgb(227, 251, 147);
+  border: 1px solid rgb(4, 107, 98);
   max-width: 900px;
   border-radius: 30px;
   display: flex;
@@ -336,7 +336,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow .modal-content .close {
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 2rem;
   font-weight: bold;
   align-self: flex-end;
@@ -349,10 +349,10 @@ main button.btn-modal:hover {
 .btn-modal {
   display: inline-block;
   padding: 12px 24px;
-  border: 2px solid rgb(227, 251, 147);
+  border: 2px solid rgb(4, 107, 98);
   border-radius: 50px;
   background-color: white;
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
@@ -362,16 +362,16 @@ main button.btn-modal:hover {
 }
 
 .btn-modal:hover {
-  background-color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
   color: white;
-  border-color: rgb(249, 97, 155);
+  border-color: rgb(248, 125, 172);
 }
 
 #modalWindow .modal-content #closeModalAccept {
   padding: 10px 20px;
   background-color: white;
-  color: rgb(249, 97, 155);
-  border: 2px solid rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
+  border: 2px solid rgb(248, 125, 172);
   border-radius: 50px;
   font-weight: bold;
   font-size: 1rem;
@@ -380,7 +380,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow .modal-content #closeModalAccept:hover {
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   color: white;
 }
 
@@ -417,13 +417,13 @@ main button.btn-modal:hover {
 /* modal 2 */
 main button.btn-modal {
   background-color: var(--text-dark);
-  color: rgb(227, 251, 147);
-  border: rgb(249, 97, 155) 2px solid;
+  color: rgb(4, 107, 98);
+  border: rgb(248, 125, 172) 2px solid;
 }
 
 main button.btn-modal:hover {
-  background-color: rgb(249, 97, 155);
-  color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
+  color: rgb(248, 125, 172);
 }
 
 #modalWindow2 {
@@ -448,11 +448,11 @@ main button.btn-modal:hover {
 }
 
 #modalWindow2 .modal-content {
-  color: rgb(227, 251, 147);
-  background-color: rgb(249, 97, 155);
+  color: rgb(4, 107, 98);
+  background-color: rgb(248, 125, 172);
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid rgb(227, 251, 147);
+  border: 1px solid rgb(4, 107, 98);
   max-width: 900px;
   border-radius: 10px;
   display: flex;
@@ -472,7 +472,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow2 .modal-content .close {
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 2rem;
   font-weight: bold;
   align-self: flex-end;
@@ -483,10 +483,10 @@ main button.btn-modal:hover {
 .btn-modal {
   display: inline-block;
   padding: 12px 24px;
-  border: 2px solid rgb(227, 251, 147);
+  border: 2px solid rgb(4, 107, 98);
   border-radius: 50px;
   background-color: white;
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
@@ -496,16 +496,16 @@ main button.btn-modal:hover {
 }
 
 .btn-modal:hover {
-  background-color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
   color: white;
-  border-color: rgb(249, 97, 155);
+  border-color: rgb(248, 125, 172);
 }
 
 #modalWindow2 .modal-content #closeModalAccept2 {
   padding: 10px 20px;
   background-color: white;
-  color: rgb(249, 97, 155);
-  border: 2px solid rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
+  border: 2px solid rgb(248, 125, 172);
   border-radius: 50px;
   font-weight: bold;
   font-size: 1rem;
@@ -514,7 +514,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow2 .modal-content #closeModalAccept2:hover {
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   color: white;
 }
 
@@ -550,13 +550,13 @@ main button.btn-modal:hover {
 /* modal 3 */
 main button.btn-modal {
   background-color: var(--text-dark);
-  color: rgb(227, 251, 147);
-  border: rgb(249, 97, 155) 2px solid;
+  color: rgb(4, 107, 98);
+  border: rgb(248, 125, 172) 2px solid;
 }
 
 main button.btn-modal:hover {
-  background-color: rgb(249, 97, 155);
-  color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
+  color: rgb(248, 125, 172);
 }
 
 #modalWindow3 {
@@ -581,11 +581,11 @@ main button.btn-modal:hover {
 }
 
 #modalWindow3 .modal-content {
-  color: rgb(227, 251, 147);
-  background-color: rgb(249, 97, 155);
+  color: rgb(4, 107, 98);
+  background-color: rgb(248, 125, 172);
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid rgb(227, 251, 147);
+  border: 1px solid rgb(4, 107, 98);
   max-width: 900px;
   border-radius: 10px;
   display: flex;
@@ -605,7 +605,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow3 .modal-content .close {
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 2rem;
   font-weight: bold;
   align-self: flex-end;
@@ -616,10 +616,10 @@ main button.btn-modal:hover {
 .btn-modal {
   display: inline-block;
   padding: 12px 24px;
-  border: 2px solid rgb(227, 251, 147);
+  border: 2px solid rgb(4, 107, 98);
   border-radius: 50px;
   background-color: white;
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
@@ -629,16 +629,16 @@ main button.btn-modal:hover {
 }
 
 .btn-modal:hover {
-  background-color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
   color: white;
-  border-color: rgb(249, 97, 155);
+  border-color: rgb(248, 125, 172);
 }
 
 #modalWindow3 .modal-content #closeModalAccept3 {
   padding: 10px 20px;
   background-color: white;
-  color: rgb(249, 97, 155);
-  border: 2px solid rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
+  border: 2px solid rgb(248, 125, 172);
   border-radius: 50px;
   font-weight: bold;
   font-size: 1rem;
@@ -647,7 +647,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow3 .modal-content #closeModalAccept3:hover {
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   color: white;
 }
 
@@ -682,13 +682,13 @@ main button.btn-modal:hover {
 /* modal 4 */
 main button.btn-modal {
   background-color: var(--text-dark);
-  color: rgb(227, 251, 147);
-  border: rgb(249, 97, 155) 2px solid;
+  color: rgb(4, 107, 98);
+  border: rgb(248, 125, 172) 2px solid;
 }
 
 main button.btn-modal:hover {
-  background-color: rgb(249, 97, 155);
-  color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
+  color: rgb(248, 125, 172);
 }
 
 #modalWindow4 {
@@ -713,11 +713,11 @@ main button.btn-modal:hover {
 }
 
 #modalWindow4 .modal-content {
-  color: rgb(227, 251, 147);
-  background-color: rgb(249, 97, 155);
+  color: rgb(4, 107, 98);
+  background-color: rgb(248, 125, 172);
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid rgb(227, 251, 147);
+  border: 1px solid rgb(4, 107, 98);
   max-width: 900px;
   border-radius: 10px;
   display: flex;
@@ -737,7 +737,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow4 .modal-content .close {
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 2rem;
   font-weight: bold;
   align-self: flex-end;
@@ -748,10 +748,10 @@ main button.btn-modal:hover {
 .btn-modal {
   display: inline-block;
   padding: 12px 24px;
-  border: 2px solid rgb(227, 251, 147);
+  border: 2px solid rgb(4, 107, 98);
   border-radius: 50px;
   background-color: white;
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
@@ -761,16 +761,16 @@ main button.btn-modal:hover {
 }
 
 .btn-modal:hover {
-  background-color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
   color: white;
-  border-color: rgb(249, 97, 155);
+  border-color: rgb(248, 125, 172);
 }
 
 #modalWindow4 .modal-content #closeModalAccept4 {
   padding: 10px 20px;
   background-color: white;
-  color: rgb(249, 97, 155);
-  border: 2px solid rgb(249, 97, 155);
+  color: rrgb(248, 125, 172);
+  border: 2px solid rrgb(248, 125, 172);
   border-radius: 50px;
   font-weight: bold;
   font-size: 1rem;
@@ -779,7 +779,7 @@ main button.btn-modal:hover {
 }
 
 #modalWindow4 .modal-content #closeModalAccept4:hover {
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   color: white;
 }
 
@@ -824,14 +824,14 @@ main button.btn-modal:hover {
   justify-content: center;
   gap: 80px;
   text-align: center;
-  background-color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
   color: white;
   padding: 60px 0;
 }
 
 .numeros-item h3 {
   font-size: 3rem;
-  color: rgb(152, 214, 105);
+  color: rgb(4, 107, 98);
 }
 
 /*  INFO FESTIVAL página principal, bloques foto + texto*/
@@ -859,7 +859,7 @@ main button.btn-modal:hover {
 }
 
 .bloque-info h2 {
-  color: rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
   margin-bottom: 15px;
 }
 
@@ -878,7 +878,7 @@ main button.btn-modal:hover {
 
 .patrocinadores h2 {
   font-size: 1.5rem;
-  color: rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
   margin-bottom: 40px;
 }
 
@@ -927,8 +927,8 @@ main button.btn-modal:hover {
 
 /* Variables */
 :root {
-  --primary-color: rgb(249, 97, 155);
-  --secondary-color: rgb(227, 251, 147);
+  --primary-color: rgb(248, 125, 172);
+  --secondary-color: rgb(4, 107, 98);
   --accent-color: #fff;
   font-family: "Boldonse", system-ui;
   --input-padding: 10px;
@@ -947,7 +947,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   backdrop-filter: blur(5px);
   z-index: 100;
 }
@@ -976,7 +976,7 @@ p {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
-  border: 2px solid rgb(249, 97, 155);
+  border: 2px solid rgb(248, 125, 172);
   border-radius: 20px; 
   background-color: white; 
 }
@@ -1105,7 +1105,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   backdrop-filter: blur(5px);
   z-index: 100;
 }
@@ -1163,7 +1163,7 @@ p {
 
 /* Cara trasera */
 .flip-card-back {
-  background-color: rgb(249, 97, 155);
+  background-color: rgb(248, 125, 172);
   color: white;
   transform: rotateY(180deg);
   overflow: auto; /* ← permite scroll si hay mucho contenido */
@@ -1182,7 +1182,7 @@ p {
 .flip-card h2 {
   font-size: 1.2rem;
   margin: 0 0 8px 0;
-  color: orangered;
+  color: rgb(4, 107, 98);
 }
 
 .flip-card p {
@@ -1221,28 +1221,28 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(227, 251, 147);
+  background-color: rgb(4, 107, 98);
   padding: 20px 40px;
   flex-wrap: wrap;
-  border-top: 2px solid rgb(249, 97, 155);
+  border-top: 2px solid rgb(248, 125, 172);
 }
 
 .footer-left p {
   margin: 0;
   font-size: 1rem;
-  color: rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
 }
 
 .footer-right a {
   margin-left: 15px;
   font-size: 1.5rem;
-  color: rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-right a:hover {
-  color: rgb(255, 0, 100);
+  color: rgb(4, 107, 98);
 }
 
 /* Responsive */
@@ -1340,7 +1340,7 @@ p {
   text-align: right;
   font-size: 4rem;
   line-height: 2;
-  color: rgb(249, 97, 155);
+  color: rgb(248, 125, 172);
 }
 
 
@@ -1370,7 +1370,7 @@ p {
   text-align: center;
   font-size: 4rem;
   margin-top: 0px;
-  color: rgb(227, 251, 147); /* opcional para que combine con tu diseño */
+  color: rgb(4, 107, 98);
 }
 
 /* responsive para la cuenta atras */
@@ -1398,10 +1398,10 @@ p {
 .boton-entradas {
   display: inline-block;
   padding: 8px 24px;
-  border: 2px solid rgb(227, 251, 147);
+  border: 2px solid rgb(4, 107, 98);
   border-radius: 50px;
   background-color: white;
-  color: rgb(227, 251, 147);
+  color: rgb(4, 107, 98);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
@@ -1418,7 +1418,7 @@ p {
 
 
 .boton-entradas:hover {
-  background-color: rgb(249, 97, 155); 
+  background-color: rgb(248, 125, 172); 
   color: white;
-  border-color: rgb(249, 97, 155);
+  border-color: rgb(248, 125, 172);
 }
