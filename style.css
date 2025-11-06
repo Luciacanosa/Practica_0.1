@@ -199,7 +199,7 @@ body.informacion section {
 
 .info-main {
   min-height: 100vh;
-  background-image: url('assets/images/intro\ home\ page\ festival.jpg'); /* usa tu imagen de fondo aquí */
+  background-image: url('assets/images/intro\ home\ page\ festival.jpg'); 
   background-size: cover;
   background-position: center;
   display: flex;
@@ -209,19 +209,35 @@ body.informacion section {
 }
 
 .main-box {
-  background-color: white;
-  padding: 3rem;
-  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 4rem 5rem;
+  border-radius: 16px;
   text-align: center;
-  max-width: 500px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
 }
 
 .main-box h1 {
-  font-size: 2.5rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  color: black;
+  font-family: "Boldonse", system-ui;
+  font-weight: 700;
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(4, 107, 98);
+}
+
+.main-box h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: rgb(248, 125, 172);
+}
+
+.main-box p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #666;
 }
 
 .main-box h1 span {
@@ -925,6 +941,69 @@ main button.btn-modal:hover {
 
 /* css para la página de entradas */
 
+/* main entradas */
+/* he cogido el main de información y lo único que he cambiado es que class:entradas-main y que aparezca la cajita con eltexto a la izquierda */
+body.informacion section {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.entradas-main {
+  min-height: 100vh;
+  background-image: url('assets/images/intro home page festival.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding-left: 5vw; 
+  padding-right: 2rem;
+}
+
+.main-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 4rem 5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 1000px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.main-box h1 {
+  font-family: "Boldonse", system-ui;
+  font-weight: 700;
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(4, 107, 98);
+}
+
+.main-box h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: rgb(248, 125, 172);
+}
+
+.main-box p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #666;
+}
+
+.main-box h1 span {
+  font-weight: bold;
+  display: block;
+}
+
+.main-box .informacionh1p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: black;
+}
+
 /* Variables */
 :root {
   --primary-color: rgb(248, 125, 172);
@@ -1080,6 +1159,80 @@ p {
 
 
 /* estilos de la página de Artistas */
+
+/* main artistas */
+/* MAIN ARTISTAS */
+.main-artistas {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("assets/images/jardin\ imagen\ principal.jpg"); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding-right: 5vw;
+}
+
+.contenido-artistas {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 4rem 5rem;
+  border-radius: 16px;
+  text-align: right;
+  max-width: 700px; 
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.contenido-artistas h1 {
+  font-family: "Boldonse", system-ui;
+  font-weight: 700;
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(4, 107, 98);
+}
+
+.contenido-artistas h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: rgb(248, 125, 172);
+}
+
+.contenido-artistas p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #666;
+}
+
+/* MEDIA QUERY para móviles */
+@media (max-width: 768px) {
+  .main-artistas {
+    justify-content: center;
+    padding: 0 2rem;
+  }
+
+  .contenido-artistas {
+    text-align: center;
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .contenido-artistas h1 {
+    font-size: 2.2rem;
+  }
+
+  .contenido-artistas h2 {
+    font-size: 1.2rem;
+  }
+
+  .contenido-artistas p {
+    font-size: 1rem;
+  }
+}
+
 
 /* Tarjeta con animación flip */
 /* Reset y box-sizing global */
