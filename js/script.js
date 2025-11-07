@@ -12,7 +12,6 @@ burger.addEventListener("click", function () {
   menu_opt.classList.toggle("menu-show");
 });
 
-
 // menu acordeon página información
 // Función para mostrar/ocultar el texto extendido
 const botones = document.querySelectorAll(".ver-mas");
@@ -32,29 +31,25 @@ botones.forEach((boton) => {
 /*eslint-env browser*/
 
 function shrinkHeader() {
-    "use strict";
-    var scroll = window.scrollY;
-    var threshold = window.innerHeight / 2;
-    var header = document.getElementsByTagName("header")[0];
-    if (scroll > threshold) {
-        header.style.height = "3em";
-        header.firstElementChild.style.fontSize = "2em";
-        header.lastElementChild.className = "desaparecer";
-    } else {
-        header.style.height = "7em";
-        header.firstElementChild.style.fontSize = "3em";
-        header.lastElementChild.className = "";
-    }
+  "use strict";
+  var scroll = window.scrollY;
+  var threshold = window.innerHeight / 2;
+  var header = document.getElementsByTagName("header")[0];
+  if (scroll > threshold) {
+    header.style.height = "3em";
+    header.firstElementChild.style.fontSize = "2em";
+    header.lastElementChild.className = "desaparecer";
+  } else {
+    header.style.height = "7em";
+    header.firstElementChild.style.fontSize = "3em";
+    header.lastElementChild.className = "";
+  }
 }
 
 window.onscroll = function () {
-    "use strict";
-    shrinkHeader();
+  "use strict";
+  shrinkHeader();
 };
-
-
-
-
 
 //  JS PARA FORMULARIO COMPRAENTRADAS
 document.addEventListener("DOMContentLoaded", function () {
@@ -134,7 +129,6 @@ window.addEventListener("click", function (event) {
   }
 });
 
-
 // modal info 2
 let btnOpenModal2 = document.querySelector("#openModal2");
 btnOpenModal2.addEventListener("click", function () {
@@ -142,8 +136,12 @@ btnOpenModal2.addEventListener("click", function () {
   modalWindow2.classList.add("show-modal");
 });
 
-let btnCloseModal2 = document.querySelector("#modalWindow2 > .modal-content > .close");
-let btnCloseModalAccept2 = document.querySelector("#modalWindow2 > .modal-content > #closeModalAccept2");
+let btnCloseModal2 = document.querySelector(
+  "#modalWindow2 > .modal-content > .close"
+);
+let btnCloseModalAccept2 = document.querySelector(
+  "#modalWindow2 > .modal-content > #closeModalAccept2"
+);
 
 btnCloseModal2.addEventListener("click", function () {
   document.querySelector("#modalWindow2").classList.remove("show-modal");
@@ -167,8 +165,12 @@ btnOpenModal3.addEventListener("click", function () {
   modalWindow3.classList.add("show-modal");
 });
 
-let btnCloseModal3 = document.querySelector("#modalWindow3 > .modal-content > .close");
-let btnCloseModalAccept3 = document.querySelector("#modalWindow3 > .modal-content > #closeModalAccept3");
+let btnCloseModal3 = document.querySelector(
+  "#modalWindow3 > .modal-content > .close"
+);
+let btnCloseModalAccept3 = document.querySelector(
+  "#modalWindow3 > .modal-content > #closeModalAccept3"
+);
 
 btnCloseModal3.addEventListener("click", function () {
   document.querySelector("#modalWindow3").classList.remove("show-modal");
@@ -192,8 +194,12 @@ btnOpenModal4.addEventListener("click", function () {
   modalWindow4.classList.add("show-modal");
 });
 
-let btnCloseModal4 = document.querySelector("#modalWindow4 > .modal-content > .close");
-let btnCloseModalAccept4 = document.querySelector("#modalWindow4 > .modal-content > #closeModalAccept4");
+let btnCloseModal4 = document.querySelector(
+  "#modalWindow4 > .modal-content > .close"
+);
+let btnCloseModalAccept4 = document.querySelector(
+  "#modalWindow4 > .modal-content > #closeModalAccept4"
+);
 
 btnCloseModal4.addEventListener("click", function () {
   document.querySelector("#modalWindow4").classList.remove("show-modal");
@@ -210,8 +216,6 @@ window.addEventListener("click", function (event) {
   }
 });
 
-
-
 // script para la cuenta atrás del festival
 // página principal
 document.addEventListener("DOMContentLoaded", function () {
@@ -222,7 +226,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var distance = countDownDate - now;
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -235,31 +241,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 1000);
 });
-
-
-/*jslint devel: true*/
-/*eslint-env browser*/
-
-function shrinkHeader() {
-    "use strict";
-    var scroll = window.scrollY;
-    var threshold = window.innerHeight / 2;
-    var header = document.getElementsByTagName("header")[0];
-    if (scroll > threshold) {
-        header.style.height = "3em";
-        header.firstElementChild.style.fontSize = "2em";
-        header.lastElementChild.className = "desaparecer";
-    } else {
-        header.style.height = "7em";
-        header.firstElementChild.style.fontSize = "3em";
-        header.lastElementChild.className = "";
-    }
-}
-
-window.onscroll = function () {
-    "use strict";
-    shrinkHeader();
-};
-
-
-
