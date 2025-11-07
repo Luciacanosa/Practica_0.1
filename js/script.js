@@ -237,4 +237,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/*jslint devel: true*/
+/*eslint-env browser*/
+
+function shrinkHeader() {
+    "use strict";
+    var scroll = window.scrollY;
+    var threshold = window.innerHeight / 2;
+    var header = document.getElementsByTagName("header")[0];
+    if (scroll > threshold) {
+        header.style.height = "3em";
+        header.firstElementChild.style.fontSize = "2em";
+        header.lastElementChild.className = "desaparecer";
+    } else {
+        header.style.height = "7em";
+        header.firstElementChild.style.fontSize = "3em";
+        header.lastElementChild.className = "";
+    }
+}
+
+window.onscroll = function () {
+    "use strict";
+    shrinkHeader();
+};
+
+
 
