@@ -4,21 +4,14 @@
 
 let burger = document.querySelector(".burger > i");
 let menu_opt = document.querySelector(".menu");
-let closeMenuBtn = document.querySelector(".close-menu");
 
 // definimos evneto click sobre le botón del menú
 burger.addEventListener("click", function () {
-  if(!isOpen) {
-    menu_opt.classList.add("menu-show")
-    burger.classList.remove("fa-bars")
-    burger.classList.add("fa-times")
-  } else {
-    menu_opt.classList.remove("menu-show")
-    burger.classList.remove("fa-times")
-    burger.classList.add("fa-bars")
-  }
-
+  burger.classList.toggle("fa-bars");
+  burger.classList.toggle("fa-times");
+  menu_opt.classList.toggle("menu-show");
 });
+
 
 // menu acordeon página información
 // Función para mostrar/ocultar el texto extendido
