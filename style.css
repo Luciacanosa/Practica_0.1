@@ -1625,7 +1625,15 @@ p {
     transition: 0.5s;
   }
 
-  .titulo-festival,
+  .titulo-festival {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+    position: static;
+    text-align: center;
+     transition: 0.1s;
+  }
+
   .ciudad-festival,
   .fechas-festival {
     position: static;
