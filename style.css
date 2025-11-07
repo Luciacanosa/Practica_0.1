@@ -11,7 +11,6 @@ section {
   margin-bottom: 60px;
 }
 
-
 /* lo que me ha dado google para las tipografías usadas en la página */
 
 .boldonse-regular {
@@ -28,7 +27,6 @@ section {
 
 /* font Roboto */
 
-
 .roboto-bold {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -44,7 +42,6 @@ section {
   font-style: normal;
   font-variation-settings: "wdth" 87.5;
 }
-
 
 /* para que la barrita del menu ocupe todo el ancho */
 body {
@@ -94,7 +91,6 @@ nav {
   transform: scale(1.1);
 }
 
-
 /* Menú alineado totalmente a la derecha */
 .menu {
   list-style: none;
@@ -132,55 +128,50 @@ nav {
 }
 
 .desaparecer {
-    box-shadow: none;
-    width: 0;
-    height: 0;
-    opacity: 0;
+  box-shadow: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
-
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 678px) {
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-      .burger {
+  .burger {
     display: block;
     font-size: 2rem;
     color: rgb(4, 107, 98);
     cursor: pointer;
     z-index: 10000;
   }
-   
-    .menu {
-        margin: 0;
-        background: #343434;
-        position: fixed;
-        right: -100%;
-        top: 70px;
-        width: 100%;
-        height: calc(100% - 70px);
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 0;
-        z-index: 1;
-        transition: all 0.33s;
-    }
 
-    .menulink {
-        font-size: 1.2rem;
-        text-align: center;
-    }
+  .menu {
+    margin: 0;
+    background: #343434;
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    width: 100%;
+    height: calc(100% - 70px);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    z-index: 1;
+    transition: all 0.33s;
+  }
 
-    .menu-show {
-        right: 0;
-    }
+  .menulink {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .menu-show {
+    right: 0;
+  }
 }
-
-
-
-
 
 /* ESTILOS PÁGINA INFORMACIÓN */
 .hero-informacion {
@@ -223,7 +214,6 @@ nav {
   margin: 2rem 0; /* 👈 espacio arriba y abajo */
 }
 
-
 .info-texto {
   flex: 1;
 }
@@ -254,15 +244,13 @@ body.informacion section {
 /* estilos para las imagenes */
 
 .info-bloque img {
-  width: 500px; 
+  width: 500px;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-left: 2rem; 
-  margin-right: 2rem; 
+  margin-left: 2rem;
+  margin-right: 2rem;
   object-fit: cover;
-  
-  
 }
 .info-bloque.derecha img {
   margin-left: 2rem;
@@ -289,7 +277,7 @@ body.informacion section {
   }
 
   .info-bloque img {
-    width: 80%; 
+    width: 80%;
   }
 }
 
@@ -349,8 +337,6 @@ main button.btn-modal:hover {
   color: rgb(4, 107, 98); /* ← nuevo color */
 }
 
-
-
 #modalWindow .modal-content h3 {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -358,7 +344,6 @@ main button.btn-modal:hover {
   font-weight: 800;
   font-style: normal;
   font-variation-settings: "wdth" 87.5;
-  
 }
 
 #modalWindow .modal-content p {
@@ -368,7 +353,6 @@ main button.btn-modal:hover {
   font-weight: 200;
   font-style: normal;
   font-variation-settings: "wdth" 87.5;
-  
 }
 
 #modalWindow .modal-content .close {
@@ -384,8 +368,6 @@ main button.btn-modal:hover {
 .close::after {
   color: rgb(4, 107, 98) !important;
 }
-
-
 
 .btn-modal {
   display: inline-block;
@@ -452,8 +434,6 @@ main button.btn-modal:hover {
     font-size: 1rem;
   }
 }
-
-
 
 /* modal 2 */
 main button.btn-modal {
@@ -586,7 +566,6 @@ main button.btn-modal:hover {
     font-size: 1rem;
   }
 }
-
 
 /* modal 3 */
 main button.btn-modal {
@@ -852,13 +831,6 @@ main button.btn-modal:hover {
   }
 }
 
-
-
-
-
-
-
-
 /* SECCIÓN NÚMEROS página principal (2 dias, 2 escenarios, 26 artistas  */
 .numeros {
   display: flex;
@@ -907,7 +879,6 @@ main button.btn-modal:hover {
 .bloque-info p {
   color: #333;
   line-height: 1.6;
-  
 }
 
 /*  PATROCINADORES página principal */
@@ -978,8 +949,6 @@ main button.btn-modal:hover {
   display: block;
 }
 
-
-
 /* css para la página de entradas */
 
 /* main entradas */
@@ -991,13 +960,13 @@ body.informacion section {
 
 .entradas-main {
   min-height: 100vh;
-  background-image: url('assets/images/intro home page festival.jpg'); 
+  background-image: url("assets/images/intro home page festival.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
-  padding-left: 5vw; 
+  padding-left: 5vw;
   padding-right: 2rem;
 }
 
@@ -1087,20 +1056,18 @@ p {
   color: #fff;
 }
 
-
 #EntradasMenu form {
   max-width: 1000px;
   min-height: fit-content;
-  padding: 2rem; 
-  margin: 0 auto; 
+  padding: 2rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
   border: 2px solid rgb(248, 125, 172);
-  border-radius: 20px; 
-  background-color: white; 
+  border-radius: 20px;
+  background-color: white;
 }
-
 
 #EntradasMenu form div {
   display: flex;
@@ -1175,7 +1142,6 @@ p {
   border: 1px solid var(--secondary-color);
 }
 
-
 /* para los apartados que están como Entradas Agotadas, cambiarles el color */
 #EntradasMenu form .agotado {
   border-radius: 4px;
@@ -1194,11 +1160,6 @@ p {
   cursor: not-allowed;
 }
 
-
-
-
-
-
 /* estilos de la página de Artistas */
 
 /* main artistas */
@@ -1207,11 +1168,11 @@ p {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("assets/images/jardin\ imagen\ principal.jpg"); 
+  background-image: url("assets/images/jardin\ imagen\ principal.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
   padding-right: 5vw;
 }
@@ -1221,7 +1182,7 @@ p {
   padding: 4rem 5rem;
   border-radius: 16px;
   text-align: right;
-  max-width: 900px; 
+  max-width: 900px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -1313,8 +1274,6 @@ p {
   line-height: 1.8;
   justify-content: center;
 }
-
-
 
 /* Tarjeta con animación flip */
 /* Reset y box-sizing global */
@@ -1450,7 +1409,6 @@ p {
   }
 }
 
-
 /* FOOTER CSS */
 .footer-festival {
   display: flex;
@@ -1496,10 +1454,8 @@ p {
   }
 }
 
-
 /* inicio página principal */
 /* Fondo con imagen */
-
 
 /* Contenido principal */
 .pagina-principal {
@@ -1519,8 +1475,6 @@ p {
   filter: brightness(1);
 }
 
-
-
 /* Contenedor de contenido */
 .contenido-festival {
   width: 90%;
@@ -1535,7 +1489,7 @@ p {
   position: absolute;
   top: 120px;
   left: 40px;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
 }
@@ -1557,13 +1511,14 @@ p {
   gap: 60px;
   margin: 0 auto;
   margin-top: 100px;
+  margin-right: 250px;
 }
 
 /* Lista de artistas */
 .lista-artistas {
   list-style: none;
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 1rem;
   line-height: 2;
   text-align: left;
 }
@@ -1571,13 +1526,12 @@ p {
 .fechas-festival {
   position: absolute;
   bottom: 40px; /* ← mismo valor que .ciudad-festival */
-  right: 40px;  /* ← pegado al borde derecho */
+  right: 40px; /* ← pegado al borde derecho */
   text-align: right;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 2;
   color: rgb(248, 125, 172);
 }
-
 
 /* Responsive */
 /* este es más completo ya que como hay más cosas en el main, es más difícil que todo quede bien cuando se hace para pantalla pequeña */
@@ -1611,8 +1565,6 @@ p {
   }
 }
 
-
-
 /* css para la cuenta atrás del festival */
 #demo {
   display: flex;
@@ -1644,7 +1596,6 @@ p {
   }
 }
 
-
 /* botón en el index.html que te lleva a entradas.html para poder comprarlas más rapido */
 .boton-entradas {
   display: inline-block;
@@ -1667,19 +1618,15 @@ p {
   margin-top: 60px;
 }
 
-
 .boton-entradas:hover {
-  background-color: rgb(248, 125, 172); 
+  background-color: rgb(248, 125, 172);
   color: white;
   border-color: rgb(248, 125, 172);
 }
 
-
-
 /* css para la página de horarios
 
 /* MAIN HORARIO */
-
 
 .contenido-horario {
   background-color: rgba(255, 255, 255, 0.85);
@@ -1787,5 +1734,3 @@ p {
     width: 90%;
   }
 }
-
-

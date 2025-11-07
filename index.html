@@ -7,30 +7,34 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Boldonse&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Boldonse&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     />
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-   
     <header>
       <nav>
         <figure>
-        <a href="index.html" class="logo-link">
-          <img
-            src="assets/images/icono buho.png"
-            alt="Logo del festival"
-            class="logo-icon"
-          />
-        </a>
+          <a href="index.html" class="logo-link">
+            <img
+              src="assets/images/icono buho.png"
+              alt="Logo del festival"
+              class="logo-icon"
+            />
+          </a>
         </figure>
 
         <ul class="menu">
@@ -44,6 +48,7 @@
         </div>
       </nav>
     </header>
+
     <main class="pagina-principal">
       <div class="fondo-festival"></div>
 
@@ -72,7 +77,7 @@
             <li>Lucas Colman</li>
             <li>Luis Fercán</li>
             <li>Leiva</li>
-          </ul >
+          </ul>
           <ul class="lista-artistas">
             <li>Mafalda Cardenal</li>
             <li>Malmö 040</li>
@@ -87,48 +92,49 @@
             <li>Sobrezero</li>
             <li>Taburete</li>
             <li>Viva Suecia</li>
-
           </ul>
         </div>
-          
-        <div class="fechas-festival">18-19<br />
+
+        <div class="fechas-festival">
+          18-19<br />
           Septiembre<br />
-          2026</div>
+          2026
+        </div>
         <div class="fechas-festival"></div>
       </section>
-
     </main>
 
-      <!-- CUENTA ATRÁS FESTIVAL -->
-     <!-- lo he intentado de mil maneras pero no se por qué si lo pongo directamente en el scrip.js no me funciona -->
+    <!-- CUENTA ATRÁS FESTIVAL -->
+    <!-- lo he intentado de mil maneras pero no se por qué si lo pongo directamente en el scrip.js no me funciona -->
 
-    <script>document.addEventListener("DOMContentLoaded", function () {
-  var countDownDate = new Date("Sept 18, 2026 15:00:00").getTime();
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var countDownDate = new Date("Sept 18, 2026 15:00:00").getTime();
 
-  var x = setInterval(function () {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
+        var x = setInterval(function () {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("demo").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+          document.getElementById("demo").innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-  }, 1000);
-});
-</script>
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      });
+    </script>
     <section>
       <p id="demo"></p>
     </section>
-
-
 
     <!-- ENTRADAS BANNER -->
     <section class="entradas-banner">
@@ -161,7 +167,6 @@
         <p>ARTISTAS</p>
       </div>
     </section>
-    
 
     <!-- INFORMACIÓN DEL FESTIVAL -->
     <section class="info-festival">
@@ -301,33 +306,59 @@
 
     <!-- FOOTER -->
     <footer class="footer-festival">
-  <div class="footer-left">
-    <p>&copy; Jardín de las Delicias 2026. Todos los derechos reservados.</p>
-  </div>
-  <div class="footer-right">
-    <a href="https://instagram.com/2festival_jardindelasdelicias" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://tiktok.com/festival_jardindelicias" target="_blank" aria-label="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://twitter.com/jardindeliciasf" target="_blank" aria-label="Twitter">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://facebook.com/festival" target="_blank" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="mailto:festival@email.com" target="_blank" aria-label="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://spotify.com/festival" target="_blank" aria-label="Spotify">
-      <i class="fab fa-spotify"></i>
-    </a>
-    <a href="https://youtube.com/@jardindelasdelicias" target="_blank" aria-label="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-  </div>
-</footer>
+      <div class="footer-left">
+        <p>
+          &copy; Jardín de las Delicias 2026. Todos los derechos reservados.
+        </p>
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://instagram.com/2festival_jardindelasdelicias"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://tiktok.com/festival_jardindelicias"
+          target="_blank"
+          aria-label="TikTok"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a
+          href="https://twitter.com/jardindeliciasf"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://facebook.com/festival"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:festival@email.com" target="_blank" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://spotify.com/festival"
+          target="_blank"
+          aria-label="Spotify"
+        >
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a
+          href="https://youtube.com/@jardindelasdelicias"
+          target="_blank"
+          aria-label="YouTube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
